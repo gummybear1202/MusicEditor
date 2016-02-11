@@ -1,5 +1,6 @@
 
-This is a project for Object-Oriented Design in Fall 2015. I worked with a partner and my major contribution was supporting the playback feature using MIDI library and the controller. 
+This is a project for Object-Oriented Design in Fall 2015.
+I worked with a partner and my major contribution was supporting the playback feature using MIDI library and the controller.   
 
 
 _______SUNDAY_______
