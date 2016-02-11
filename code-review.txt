@@ -1,0 +1,32 @@
+In that review, consider all the self-evaluation questions you have been asked
+during this course, and extrapolate from them the kinds of issues to examine.
+For example: how flexible is the interface you were given? How capable are the
+views? How convenient was it to reuse their code, or adapt their interface to
+your expectations? How cleanly written and well-documented was their code? If
+you needed to request changes from them, definitely explain what changes were
+needed and why.
+
+- view creates handlers.
+Their setNote() was more flexible than our moveTo() method. I think it's
+good that they give this flexibility so that when people want to modify a note
+they can also change all other features of a note, such as the duration,
+start, instrument and volume. However, I'm note sure if setNote() is suppose
+ to be a note maker or a note mover. There were no explicit documentation
+ about that (they said they didn't use it in the view, but it could be from
+ the previous assignment that they forgot to delete).
+ - tight coupling with the note implementation
+
+ anoteAdapter: it has a method called generate() that would create a Note
+ from ANote in order to make our modelAdapter to work (delegates to model
+ .addNote() which takes in a Note).
+
+ if setNote() is called in edit(), it is very inconsistent because setNote
+ takes in a new start and a new end while in edit() it takes in a new start
+ and a new duration.
+
+ - change equals() in ANote to compare another ANote
+ - make the method makeNote abstract and create one of our note in the adapter.
+ - can't make the method abstract because it has to be called statically in
+ guiviewframe.
+ - still won't work because our Note class doesn't extend their
+ - their viewFactory doesn't call the compound view
